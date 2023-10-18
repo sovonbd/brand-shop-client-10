@@ -6,7 +6,7 @@ const Logo = () => {
       <Link to="/">
         <img
           src="https://i.imgur.com/ZlVjCZf.png"
-          className="w-16 lg:w-24"
+          className="w-16 lg:w-20"
           alt=""
         />
       </Link>

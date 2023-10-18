@@ -1,0 +1,38 @@
+[
+  {
+    "id": "1",
+    "path": "/pizza",
+    "photo": "https://i.imgur.com/3aLwquR.png",
+    "name": "Pizza"
+  },
+  {
+    "id": "2",
+    "path": "/burger",
+    "photo": "https://i.imgur.com/UTZS93K.png",
+    "name": "Burger"
+  },
+  {
+    "id": "3",
+    "path": "/dessert",
+    "photo": "https://i.imgur.com/DjzgHi5.png",
+    "name": "Dessert"
+  },
+  {
+    "id": "4",
+    "path": "/salad",
+    "photo": "https://i.imgur.com/7pRtP67.png",
+    "name": "Salad"
+  },
+  {
+    "id": "5",
+    "path": "/breakfast",
+    "photo": "https://i.imgur.com/ofRvS3F.png",
+    "name": "Breakfast"
+  },
+  {
+    "id": "6",
+    "path": "/lunch",
+    "photo": "https://i.imgur.com/mcg2uq6.png",
+    "name": "Lunch"
+  }
+]
