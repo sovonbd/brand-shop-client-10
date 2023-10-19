@@ -12,7 +12,7 @@ const DealItem = () => {
           ingredients, a secret sauce, and generous pepperoni, each slice is a
           savory delight. Embrace the timeless taste of tradition.
         </p>
-        <Link to="/pizza">
+        <Link to="/pizza/65305f9665efa56bccd0e30e">
           <button className="btn px-12 bg-[#F36527] text-white normal-case text-xl hover:bg-transparent hover:border-[#F36527] hover:text-[#1F2937]">
             Order Now
           </button>
