@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const DealItem = () => {
   return (
     <div className="flex flex-col-reverse md:flex-row items-center lg:w-3/4 mx-auto justify-between px-4 lg:px-0 py-10 lg:py-20">
@@ -10,9 +12,11 @@ const DealItem = () => {
           ingredients, a secret sauce, and generous pepperoni, each slice is a
           savory delight. Embrace the timeless taste of tradition.
         </p>
-        <button className="btn px-12 bg-[#F36527] text-white normal-case text-xl hover:bg-transparent hover:border-[#F36527] hover:text-[#1F2937]">
-          Order Now
-        </button>
+        <Link to="/pizza">
+          <button className="btn px-12 bg-[#F36527] text-white normal-case text-xl hover:bg-transparent hover:border-[#F36527] hover:text-[#1F2937]">
+            Order Now
+          </button>
+        </Link>
       </div>
       <div className="flex-1 relative">
         <img
