@@ -1,5 +1,12 @@
+import { useLoaderData } from "react-router-dom";
 
 const UpdateProduct = () => {
+  const data = useLoaderData();
+
+  const { _id, itemName, restaurant, price, type, description, rating, photo } =
+    data;
+
+  console.log(data);
   const handleUpdateProduct = (e) => {
     e.preventDefault();
 
@@ -21,7 +28,15 @@ const UpdateProduct = () => {
       rating,
       photo,
     };
-    console.log(item);
+    // console.log(item);
+
+    fetch(`http://localhost:5000/products/${_id}`, {
+      method: "PUT",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(item),
+    });
   };
   return (
     <div>
@@ -31,7 +46,7 @@ const UpdateProduct = () => {
       <div>
         <form
           onSubmit={handleUpdateProduct}
-          className="bg-[#F4F3F0] w-5/6 md:grid md:grid-cols-2 gap-4 items-center mx-auto p-4 lg:p-10 mt-10">
+          className="bg-[#F4F3F0] w-5/6 md:grid md:grid-cols-2 gap-4 items-center mx-auto p-4 lg:p-10 mt-10 text-slate-400">
           <div className="">
             <label className="label">
               <span className="label-text font-semibold">Name</span>
@@ -40,8 +55,8 @@ const UpdateProduct = () => {
               <input
                 type="text"
                 name="itemName"
-                placeholder="Enter item name"
                 className="input input-bordered w-full"
+                defaultValue={itemName}
                 style={{ borderRadius: "0px" }}
               />
             </label>
@@ -54,8 +69,8 @@ const UpdateProduct = () => {
               <input
                 type="text"
                 name="restaurant"
-                placeholder="Enter restaurant name"
                 className="input input-bordered w-full"
+                defaultValue={restaurant}
                 style={{ borderRadius: "0px" }}
               />
             </label>
@@ -67,6 +82,7 @@ const UpdateProduct = () => {
             <select
               name="itemType"
               className="select select-bordered w-full"
+              defaultValue={type}
               style={{ borderRadius: "0px" }}>
               <option disabled selected>
                 Choose the category?
@@ -87,8 +103,8 @@ const UpdateProduct = () => {
               <input
                 type="text"
                 name="price"
-                placeholder="Enter item price"
                 className="input input-bordered w-full"
+                defaultValue={price}
                 style={{ borderRadius: "0px" }}
               />
             </label>
@@ -103,8 +119,8 @@ const UpdateProduct = () => {
               <input
                 type="text"
                 name="description"
-                placeholder="Enter item description"
                 className="input input-bordered w-full"
+                defaultValue={description}
                 style={{ borderRadius: "0px" }}
               />
             </label>
@@ -119,8 +135,8 @@ const UpdateProduct = () => {
               <input
                 type="text"
                 name="rating"
-                placeholder="Enter item rating"
                 className="input input-bordered w-full"
+                defaultValue={rating}
                 style={{ borderRadius: "0px" }}
               />
             </label>
@@ -133,8 +149,8 @@ const UpdateProduct = () => {
               <input
                 type="text"
                 name="photo"
-                placeholder="Enter item photo url"
                 className="input input-bordered w-full"
+                defaultValue={photo}
                 style={{ borderRadius: "0px" }}
               />
             </label>

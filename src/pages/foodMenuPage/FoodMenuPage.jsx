@@ -15,7 +15,7 @@ const FoodMenuPage = () => {
   const { path } = useParams();
 
   useEffect(() => {
-    fetch(`http://localhost:5000/products/${path}`)
+    fetch(`http://localhost:5000/products/type/${path}`)
       .then((res) => res.json())
       .then((data) => {
         if (data.length > 0) {
