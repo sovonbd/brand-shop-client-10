@@ -4,6 +4,7 @@ import ErrorPage from "../pages/errorPage/ErrorPage";
 import Home from "../pages/Home/Home";
 import AddProduct from "../pages/addProduct/AddProduct";
 import MyCart from "../pages/myCart/MyCart";
+import FoodMenuPage from "../pages/foodMenuPage/FoodMenuPage";
 
 const Router = createBrowserRouter([
   {
@@ -14,6 +15,11 @@ const Router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
+      },
+      {
+        path: "/:path",
+        element: <FoodMenuPage></FoodMenuPage>,
+        loader: () => fetch("foodMenu.json"),
       },
       {
         path: "/addProduct",

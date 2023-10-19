@@ -11,7 +11,7 @@ const FoodMenu = () => {
   // console.log(menu);
   return (
     <div className="py-10 text-center space-y-4 w-3/4 mx-auto">
-      <h1 className="text-2xl lg:text-5xl">Our Food Menu</h1>
+      <h1 className="text-2xl lg:text-5xl font-bold">Our Food Menu</h1>
       <p className="lg:w-3/5 mx-auto text-sm">
         A symphony of flavors, curated to elevate your dining experience. Savor
         culinary masterpieces and indulge in exquisite cuisine.
