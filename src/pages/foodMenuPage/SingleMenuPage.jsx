@@ -1,9 +1,10 @@
-import { Rating, ThinStar  } from "@smastrom/react-rating";
+import { Rating, ThinStar } from "@smastrom/react-rating";
 
 import "@smastrom/react-rating/style.css";
+import { Link } from "react-router-dom";
 
 const SingleMenuPage = ({ item }) => {
-  const { itemName, restaurant, price, type, description, rating, photo } =
+  const { _id, itemName, restaurant, price, type, description, rating, photo } =
     item;
   return (
     <div>
@@ -36,12 +37,16 @@ const SingleMenuPage = ({ item }) => {
             </div>
 
             <div className="">
-              <button className="btn btn-sm mx-auto rounded-r-none border-r-0 bg-transparent border-[#F36527] hover:bg-transparent hover:border-[#F36527] normal-case">
-                Details
-              </button>
-              <button className="btn btn-sm mx-auto rounded-l-none border-[#F36527] bg-[#F36527] text-white hover:bg-[#F36527] hover:text-white hover:border-[#F36527] normal-case">
-                Update
-              </button>
+              <Link to={_id}>
+                <button className="btn btn-sm mx-auto rounded-r-none border-r-0 bg-transparent border-[#F36527] hover:bg-transparent hover:border-[#F36527] normal-case">
+                  Details
+                </button>
+              </Link>
+              <Link to={`/updateProduct/${_id}`}>
+                <button className="btn btn-sm mx-auto rounded-l-none border-[#F36527] bg-[#F36527] text-white hover:bg-[#F36527] hover:text-white hover:border-[#F36527] normal-case">
+                  Update
+                </button>
+              </Link>
             </div>
           </div>
         </div>

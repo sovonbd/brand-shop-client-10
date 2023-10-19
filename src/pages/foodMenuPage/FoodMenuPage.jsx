@@ -31,7 +31,7 @@ const FoodMenuPage = () => {
 
   return (
     <div>
-      <div className="m-10 p-16 bg-slate-100 shadow-2xl bg-blend-hard-light">
+      <div className="bg-slate-100 shadow-2xl bg-blend-hard-light">
         <Swiper
           pagination={{
             dynamicBullets: true,
@@ -44,22 +44,22 @@ const FoodMenuPage = () => {
           }}>
           <SwiperSlide>
             <img
-              src={itemsPhoto[1]}
-              className="object-none object-left-top w-full h-[700px]"
+              src={itemsPhoto[0]}
+              className="object-none object-center w-full h-[200px] md:h-[350px] lg:h-[400px]"
               alt=""
             />
           </SwiperSlide>
           <SwiperSlide>
             <img
               src={itemsPhoto[2]}
-              className="w-full h-[600px]"
+              className="object-none object-center w-full h-[200px] md:h-[350px] lg:h-[400px]"
               alt=""
             />
           </SwiperSlide>
           <SwiperSlide>
             <img
               src={itemsPhoto[3]}
-              className="w-full h-[600px] "
+              className="object-none object-center w-full h-[200px] md:h-[350px] lg:h-[400px] "
               alt=""
             />
           </SwiperSlide>
