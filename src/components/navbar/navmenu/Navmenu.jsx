@@ -1,27 +1,37 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import Logo from "../logo/Logo";
+import { useContext } from "react";
+import { AuthContext } from "../../../provider/AuthProvider";
 
 const Navmenu = () => {
+  const { user, logOut } = useContext(AuthContext);
+
   const menu = (
-    <div className="flex flex-col md:flex-row gap-8 lg:text-lg">
+    <div className="flex flex-col md:flex-row md:gap-8 gap-2 lg:text-lg">
       <NavLink
         to="/"
         className={({ isActive }) =>
-          isActive ? "border-b-2 border-b-[#F36527] md:font-medium md:text-xl" : ""
+          isActive
+            ? "border-b-2 border-b-[#F36527] md:font-medium md:text-xl"
+            : ""
         }>
         Home
       </NavLink>
       <NavLink
         to="/addProduct"
         className={({ isActive }) =>
-          isActive ? "border-b-2 border-b-[#F36527] md:font-medium md:text-xl" : ""
+          isActive
+            ? "border-b-2 border-b-[#F36527] md:font-medium md:text-xl"
+            : ""
         }>
         Add Product
       </NavLink>
       <NavLink
         to="/myCart"
         className={({ isActive }) =>
-          isActive ? "border-b-2 border-b-[#F36527] md:font-medium md:text-xl" : ""
+          isActive
+            ? "border-b-2 border-b-[#F36527] md:font-medium md:text-xl"
+            : ""
         }>
         My Cart
       </NavLink>
@@ -49,7 +59,7 @@ const Navmenu = () => {
             </label>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-black backdrop-blur-sm w-40">
+              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box text-black backdrop-blur-sm w-40">
               {menu}
             </ul>
           </div>
@@ -61,9 +71,42 @@ const Navmenu = () => {
           <ul className="menu menu-horizontal px-1">{menu}</ul>
         </div>
         <div className="navbar-end w-auto">
-          <a className="btn bg-[#F36527] text-lg text-white normal-case border-[#F36527] hover:bg-transparent hover:border-[#F36527] hover:border-2">
-            Login
-          </a>
+          {user ? (
+            <div className="dropdown dropdown-end">
+              <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                <div className="w-10 rounded-full">
+                  <img
+                    src={
+                      !user.photoURL === "null"
+                        ? user.photoURL
+                        : "https://lh3.googleusercontent.com/a/ACg8ocJvDHisVPydZIb8y6TGCfYfOlh0x8Vy5eB72O6EOOgy8YI=s96-c"
+                    }
+                    alt={user.displayName}
+                  />
+                </div>
+              </label>
+              <ul
+                tabIndex={0}
+                className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 text-black divide-y-2">
+                <li>
+                  <button className="btn btn-sm normal-case btn-ghost">
+                    {user.displayName ? user.displayName : user.email}
+                  </button>
+                </li>
+                <li>
+                  <button className="btn btn-sm  btn-ghost" onClick={logOut}>
+                    Logout
+                  </button>
+                </li>
+              </ul>
+            </div>
+          ) : (
+            <Link
+              to="/login"
+              className="btn bg-[#F36527] text-lg text-white normal-case border-[#F36527] hover:bg-transparent hover:border-[#F36527] hover:border-2">
+              Login
+            </Link>
+          )}
         </div>
       </div>
     </div>

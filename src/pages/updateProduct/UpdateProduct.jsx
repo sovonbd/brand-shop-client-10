@@ -41,7 +41,7 @@ const UpdateProduct = () => {
   return (
     <div>
       <h1 className="pt-10 text-center text-3xl font-bold lg:text-5xl">
-        Add a new product
+        Update the product
       </h1>
       <div>
         <form

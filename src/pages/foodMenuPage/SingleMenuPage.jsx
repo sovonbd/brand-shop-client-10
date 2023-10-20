@@ -50,14 +50,6 @@ const SingleMenuPage = ({ item }) => {
             </div>
           </div>
         </div>
-        {/* <img src={photo} className="w-80 rounded-lg" alt="" />
-        <div>
-          <h3>{itemName}</h3>
-          <p>{restaurant}</p>
-          <p>{type}</p>
-          <p>{rating}</p>
-          <p>${price}</p>
-        </div> */}
       </div>
     </div>
   );

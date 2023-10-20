@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { Rating } from "@smastrom/react-rating";
 
 import "@smastrom/react-rating/style.css";
+import Swal from "sweetalert2";
 
 const ProductDetails = () => {
   const [items, setItems] = useState([]);
@@ -26,6 +27,11 @@ const ProductDetails = () => {
         "content-type": "application/json",
       },
       body: JSON.stringify(items),
+    });
+    Swal.fire({
+      icon: "success",
+      title: "Sucess...",
+      text: `${itemName} added to the cart`,
     });
   };
 

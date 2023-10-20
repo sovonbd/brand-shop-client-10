@@ -28,7 +28,7 @@ const CartItems = ({ item, items, setItems }) => {
           .then((data) => {
             console.log(data);
             if (data.deletedCount > 0) {
-              Swal.fire("Deleted!", "Your file has been deleted.", "success");
+              Swal.fire("Deleted!", `${itemName} has been deleted.`, "success");
               const remainingItems = items.filter(
                 (itemId) => itemId._id !== _id
               );

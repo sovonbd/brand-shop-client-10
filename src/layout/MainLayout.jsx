@@ -10,7 +10,7 @@ const MainLayout = () => {
       {location.pathname === "/" ? (
         ""
       ) : (
-        <div className="bg-black/80">
+        <div className="bg-black/80 relative z-10">
           <Navmenu></Navmenu>
         </div>
       )}
