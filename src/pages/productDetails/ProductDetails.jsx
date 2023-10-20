@@ -19,12 +19,22 @@ const ProductDetails = () => {
   const { itemName, restaurant, price, type, description, rating, photo } =
     items;
 
+  const handleAddToCart = () => {
+    fetch(`http://localhost:5000/cart`, {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(items),
+    });
+  };
+
   return (
-    <div className="py-10 px-32">
-      <div className="flex flex-col justify-center md:flex-row gap-4">
-        <img src={photo} className="w-1/3 mx-auto rounded-lg" alt="" />
+    <div className="py-10 px-4 lg:px-32">
+      <div className="flex flex-col justify-center lg:flex-row gap-4">
+        <img src={photo} className="lg:w-1/3 mx-auto rounded-lg" alt="" />
         <div>
-          <h1 className="text-5xl">{itemName}</h1>
+          <h1 className="text-3xl lg:text-5xl pb-1">{itemName}</h1>
           <Rating
             style={{ maxWidth: 100 }}
             readOnly
@@ -37,6 +47,7 @@ const ProductDetails = () => {
             <p className="text-justify text-sm text-gray-600">{description}</p>
           </div>
           <input
+            onClick={handleAddToCart}
             type="submit"
             value="Add to Cart"
             className="btn mt-2 w-full md:col-span-2 normal-case bg-[#F36527] border-white border-[2px] hover:text-[#1F2937] hover:border-[#F36527] hover:bg-transparent text-xl text-white"

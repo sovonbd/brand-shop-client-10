@@ -7,21 +7,21 @@ const Navmenu = () => {
       <NavLink
         to="/"
         className={({ isActive }) =>
-          isActive ? "border-b-2 border-b-[#F36527] font-medium text-xl" : ""
+          isActive ? "border-b-2 border-b-[#F36527] md:font-medium md:text-xl" : ""
         }>
         Home
       </NavLink>
       <NavLink
         to="/addProduct"
         className={({ isActive }) =>
-          isActive ? "border-b-2 border-b-[#F36527] font-medium text-xl" : ""
+          isActive ? "border-b-2 border-b-[#F36527] md:font-medium md:text-xl" : ""
         }>
         Add Product
       </NavLink>
       <NavLink
         to="/myCart"
         className={({ isActive }) =>
-          isActive ? "border-b-2 border-b-[#F36527] font-medium text-xl" : ""
+          isActive ? "border-b-2 border-b-[#F36527] md:font-medium md:text-xl" : ""
         }>
         My Cart
       </NavLink>
@@ -49,7 +49,7 @@ const Navmenu = () => {
             </label>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow backdrop-blur-sm rounded-box w-28">
+              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-black backdrop-blur-sm w-40">
               {menu}
             </ul>
           </div>
