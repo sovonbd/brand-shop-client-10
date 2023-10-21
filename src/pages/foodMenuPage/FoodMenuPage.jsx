@@ -16,7 +16,7 @@ const FoodMenuPage = () => {
   // console.log(path);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/products/brand/${path}`)
+    fetch(`https://foodie-server-black.vercel.app/products/brand/${path}`)
       .then((res) => res.json())
       .then((data) => {
         if (data.length > 0) {
@@ -28,7 +28,7 @@ const FoodMenuPage = () => {
   }, [path]);
 
   const location = useLocation();
-  console.log(items, noData);
+  // console.log(items, noData);
 
   let itemsPhoto;
 
@@ -63,7 +63,6 @@ const FoodMenuPage = () => {
       "https://i.imgur.com/Ob94x6A.jpg",
     ];
   }
-
 
   return (
     <div>

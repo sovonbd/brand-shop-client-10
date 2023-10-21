@@ -14,7 +14,7 @@ const UpdateProduct = () => {
     photo,
   } = data;
 
-  console.log(data);
+  // console.log(data);
   const handleUpdateProduct = (e) => {
     e.preventDefault();
 
@@ -41,7 +41,7 @@ const UpdateProduct = () => {
     };
     // console.log(item);
 
-    fetch(`http://localhost:5000/products/${_id}`, {
+    fetch(`https://foodie-server-black.vercel.app/products/${_id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",
@@ -74,7 +74,9 @@ const UpdateProduct = () => {
           </div>
           <div className="">
             <label className="label">
-              <span className="label-text font-semibold">Product Type Name</span>
+              <span className="label-text font-semibold">
+                Product Type Name
+              </span>
             </label>
             <label className="">
               <input

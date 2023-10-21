@@ -12,16 +12,16 @@ const ProductDetails = () => {
   // console.log(id, path);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/products/${id}`)
+    fetch(`https://foodie-server-black.vercel.app/products/${id}`)
       .then((res) => res.json())
       .then((data) => setItems(data));
   }, [id]);
 
-  const { itemName, productType, price, brand, description, rating, photo } =
+  const { itemName, price, description, rating, photo } =
     items;
 
   const handleAddToCart = () => {
-    fetch(`http://localhost:5000/cart`, {
+    fetch(`https://foodie-server-black.vercel.app/cart`, {
       method: "POST",
       headers: {
         "content-type": "application/json",

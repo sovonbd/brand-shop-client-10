@@ -9,7 +9,7 @@ const FoodMenu = () => {
       .then((res) => res.json())
       .then((data) => setMenu(data));
   }, []);
-  console.log(menu);
+  // console.log(menu);
   // console.log(menu);
   return (
     <div className="py-10 text-center space-y-4 w-3/4 mx-auto">

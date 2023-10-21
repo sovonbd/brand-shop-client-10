@@ -2,17 +2,15 @@ import { Rating } from "@smastrom/react-rating";
 import { RxCross1 } from "react-icons/rx";
 
 import "@smastrom/react-rating/style.css";
-import { data } from "autoprefixer";
 import Swal from "sweetalert2";
+import PropTypes from "prop-types";
 
 const CartItems = ({ item, items, setItems }) => {
   const {
     _id,
     itemName,
-    productType,
     price,
     brand,
-    description,
     rating,
     photo,
   } = item;
@@ -29,7 +27,7 @@ const CartItems = ({ item, items, setItems }) => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/cart/${_id}`, {
+        fetch(`https://foodie-server-black.vercel.app/cart/${_id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())
@@ -92,4 +90,9 @@ const CartItems = ({ item, items, setItems }) => {
   );
 };
 
+CartItems.propTypes = {
+  item: PropTypes.object.isRequired,
+  items: PropTypes.array.isRequired,
+  setItems: PropTypes.func.isRequired,
+};
 export default CartItems;

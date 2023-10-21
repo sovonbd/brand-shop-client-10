@@ -1,19 +1,11 @@
-import { Rating, ThinStar } from "@smastrom/react-rating";
+import { Rating } from "@smastrom/react-rating";
 
 import "@smastrom/react-rating/style.css";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
 const SingleMenuPage = ({ item }) => {
-  const {
-    _id,
-    itemName,
-    productType,
-    price,
-    brand,
-    description,
-    rating,
-    photo,
-  } = item;
+  const { _id, itemName, productType, price, brand, rating, photo } = item;
   return (
     <div>
       <div className="flex flex-col justify-center items-center">
@@ -75,4 +67,7 @@ const SingleMenuPage = ({ item }) => {
   );
 };
 
+SingleMenuPage.propTypes = {
+  item: PropTypes.object.isRequired,
+};
 export default SingleMenuPage;

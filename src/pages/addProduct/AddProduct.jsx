@@ -25,7 +25,7 @@ const AddProduct = () => {
     };
     console.log(item);
 
-    fetch("http://localhost:5000/addProduct", {
+    fetch("https://foodie-server-black.vercel.app/addProduct", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -65,9 +65,7 @@ const AddProduct = () => {
               name="productType"
               className="select select-bordered w-full"
               style={{ borderRadius: "0px" }}>
-              <option selected>
-                Choose the product?
-              </option>
+              <option selected>Choose the product?</option>
               <option>Pizza</option>
               <option>Burger</option>
               <option>Fries</option>
@@ -86,13 +84,11 @@ const AddProduct = () => {
               name="brand"
               className="select select-bordered w-full"
               style={{ borderRadius: "0px" }}>
-              <option selected>
-                Choose the brand?
-              </option>
+              <option selected>Choose the brand?</option>
               <option>Pizza Hut</option>
               <option>Burger King</option>
               <option>KFC</option>
-              <option>McDonald's</option>
+              <option>McDonald&apos;s</option>
               <option>Subway</option>
               <option>Starbucks</option>
             </select>

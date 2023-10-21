@@ -50,7 +50,7 @@ const Router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/products/${params.id}`),
+          fetch(`https://foodie-server-black.vercel.app/products/${params.id}`),
       },
       {
         path: "/myCart",
@@ -59,7 +59,7 @@ const Router = createBrowserRouter([
             <MyCart></MyCart>,
           </PrivateRoute>
         ),
-        loader: () => fetch("http://localhost:5000/cart"),
+        loader: () => fetch("https://foodie-server-black.vercel.app/cart"),
       },
       {
         path: "/login",
