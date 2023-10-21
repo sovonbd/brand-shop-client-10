@@ -14,7 +14,7 @@ const Footer = () => {
             />
           </Link>
           <p className="font-bold">
-            Foodie Industries Ltd. <br />
+            Foodie Restaurant Ltd. <br />
             Providing the best dishes since 2000
           </p>
           <p>Copyright © 2023 - All right reserved</p>

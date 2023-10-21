@@ -59,7 +59,10 @@ const CartItems = ({ item, items, setItems }) => {
               value={rating}></Rating>
           </div>
         </div>
-        <button onClick={() => handleDelete(_id)}>
+        <button
+          className="tooltip tooltip-left"
+          data-tip="Remove"
+          onClick={() => handleDelete(_id)}>
           <RxCross1 className="text-xl hover:text-[#F36527] active:text-sm"></RxCross1>
         </button>
       </div>

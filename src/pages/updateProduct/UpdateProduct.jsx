@@ -14,7 +14,10 @@ const UpdateProduct = () => {
     const itemName = form.itemName.value;
     const restaurant = form.restaurant.value;
     const price = form.price.value;
-    const type = form.itemType.value;
+    const type = form.itemType.value
+      .toLowerCase()
+      .replace(/ /g, "")
+      .replace(/'/g, "");
     const description = form.description.value;
     const rating = form.rating.value;
     const photo = form.photo.value;
@@ -82,17 +85,31 @@ const UpdateProduct = () => {
             <select
               name="itemType"
               className="select select-bordered w-full"
-              defaultValue={type}
+              defaultValue={
+                type === "pizzahut"
+                  ? "Pizza Hut"
+                  : type === "burgerking"
+                  ? "Burger King"
+                  : type === "kfc"
+                  ? "KFC"
+                  : type === "mcdonalds"
+                  ? "McDonald's"
+                  : type === "subway"
+                  ? "Subway"
+                  : type === "starbucks"
+                  ? "Starbucks"
+                  : ""
+              }
               style={{ borderRadius: "0px" }}>
               <option disabled selected>
                 Choose the category?
               </option>
-              <option>Pizza</option>
-              <option>Burger</option>
-              <option>Dessert</option>
-              <option>Salad</option>
-              <option>Breakfast</option>
-              <option>Lunch</option>
+              <option>Pizza Hut</option>
+              <option>Burger King</option>
+              <option>KFC</option>
+              <option>McDonald&apos;s</option>
+              <option>Subway</option>
+              <option>Starbucks</option>
             </select>
           </div>
           <div className="">

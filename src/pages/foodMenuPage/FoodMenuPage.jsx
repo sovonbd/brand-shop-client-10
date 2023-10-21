@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 import SingleMenuPage from "./SingleMenuPage";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -13,6 +13,7 @@ const FoodMenuPage = () => {
   const [noData, setNoData] = useState("");
 
   const { path } = useParams();
+  // console.log(path);
 
   useEffect(() => {
     fetch(`http://localhost:5000/products/type/${path}`)
@@ -26,7 +27,24 @@ const FoodMenuPage = () => {
       });
   }, [path]);
 
-  const itemsPhoto = items.map((item) => item.photo);
+  const location = useLocation();
+
+  // let itemsPhoto;
+
+  // if (location.pathname === "/pizzahut") {
+  //   itemsPhoto = [
+  //     "https://i.imgur.com/OdCUaRe.jpg",
+  //     "https://i.imgur.com/OdCUaRe.jpg",
+  //     "https://i.imgur.com/OdCUaRe.jpg",
+  //   ];
+  // }
+
+  const itemsPhoto = [
+    "https://i.imgur.com/OdCUaRe.jpg",
+    "https://i.imgur.com/OdCUaRe.jpg",
+    "https://i.imgur.com/OdCUaRe.jpg",
+  ];
+  // const itemsPhoto = items.map((item) => item.photo);
   console.log(itemsPhoto[0]);
 
   return (
@@ -55,14 +73,14 @@ const FoodMenuPage = () => {
               </SwiperSlide>
               <SwiperSlide>
                 <img
-                  src={itemsPhoto[2]}
+                  src={itemsPhoto[1]}
                   className="object-none object-center w-full h-[200px] md:h-[350px] lg:h-[400px]"
                   alt=""
                 />
               </SwiperSlide>
               <SwiperSlide>
                 <img
-                  src={itemsPhoto[3]}
+                  src={itemsPhoto[2]}
                   className="object-none object-center w-full h-[200px] md:h-[350px] lg:h-[400px] "
                   alt=""
                 />

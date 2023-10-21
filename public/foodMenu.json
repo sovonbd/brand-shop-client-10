@@ -1,38 +1,38 @@
 [
   {
     "id": "1",
-    "path": "/pizza",
-    "photo": "https://i.imgur.com/3aLwquR.png",
-    "name": "Pizza"
+    "path": "/pizzahut",
+    "photo": "https://i.imgur.com/T1ono2Y.png",
+    "name": "Pizza Hut"
   },
   {
     "id": "2",
-    "path": "/burger",
-    "photo": "https://i.imgur.com/UTZS93K.png",
-    "name": "Burger"
+    "path": "/burgerking",
+    "photo": "https://i.imgur.com/xmJUYR8.png",
+    "name": "Burger King"
   },
   {
     "id": "3",
-    "path": "/dessert",
-    "photo": "https://i.imgur.com/DjzgHi5.png",
-    "name": "Dessert"
+    "path": "/kfc",
+    "photo": "https://i.imgur.com/y3Nuzcn.png",
+    "name": "KFC"
   },
   {
     "id": "4",
-    "path": "/salad",
-    "photo": "https://i.imgur.com/7pRtP67.png",
-    "name": "Salad"
+    "path": "/mcdonalds",
+    "photo": "https://i.imgur.com/8ePx7ib.png",
+    "name": "McDonald's"
   },
   {
     "id": "5",
-    "path": "/breakfast",
-    "photo": "https://i.imgur.com/ofRvS3F.png",
-    "name": "Breakfast"
+    "path": "/subway",
+    "photo": "https://i.imgur.com/Hyl5ztM.png",
+    "name": "Subway"
   },
   {
     "id": "6",
-    "path": "/lunch",
-    "photo": "https://i.imgur.com/mcg2uq6.png",
-    "name": "Lunch"
+    "path": "/starbucks",
+    "photo": "https://i.imgur.com/53Kj0Kv.png",
+    "name": "Starbucks"
   }
 ]
