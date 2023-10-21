@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const DealItem = () => {
   return (
-    <div className="flex flex-col-reverse md:flex-row items-center lg:w-3/4 mx-auto justify-between px-4 lg:px-0 py-10 lg:py-20">
+    <div className="flex flex-col-reverse md:flex-row items-center lg:w-3/4 mx-auto justify-between px-4 lg:px-0 py-10 md:py-20">
       <div className="flex-1 text-center md:text-left">
         <h1 className="text-2xl lg:text-5xl font-semibold w-max mx-auto md:mx-0">
           Peperoni Pizza
