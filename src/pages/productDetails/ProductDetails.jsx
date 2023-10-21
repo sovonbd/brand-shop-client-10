@@ -17,8 +17,7 @@ const ProductDetails = () => {
       .then((data) => setItems(data));
   }, [id]);
 
-  const { itemName, price, description, rating, photo } =
-    items;
+  const { itemName, price, description, rating, photo } = items;
 
   const handleAddToCart = () => {
     fetch(`https://foodie-server-black.vercel.app/cart`, {

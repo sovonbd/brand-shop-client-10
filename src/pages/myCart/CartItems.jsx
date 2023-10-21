@@ -6,17 +6,11 @@ import Swal from "sweetalert2";
 import PropTypes from "prop-types";
 
 const CartItems = ({ item, items, setItems }) => {
-  const {
-    _id,
-    itemName,
-    price,
-    brand,
-    rating,
-    photo,
-  } = item;
+  const { _id, itemName, price, brand, rating, photo } = item;
+  console.log(item);
 
   const handleDelete = (_id) => {
-    // console.log(_id);
+    console.log(_id);
     Swal.fire({
       title: "Are you sure?",
       text: "You won't be able to revert this!",
@@ -32,7 +26,7 @@ const CartItems = ({ item, items, setItems }) => {
         })
           .then((res) => res.json())
           .then((data) => {
-            // console.log(data);
+            console.log(data);
             if (data.deletedCount > 0) {
               Swal.fire("Deleted!", `${itemName} has been deleted.`, "success");
               const remainingItems = items.filter(
@@ -40,7 +34,8 @@ const CartItems = ({ item, items, setItems }) => {
               );
               setItems(remainingItems);
             }
-          });
+          })
+          .catch((error) => console.error(error));
       }
     });
   };

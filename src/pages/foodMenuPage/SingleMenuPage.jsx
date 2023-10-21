@@ -6,6 +6,7 @@ import PropTypes from "prop-types";
 
 const SingleMenuPage = ({ item }) => {
   const { _id, itemName, productType, price, brand, rating, photo } = item;
+  
   return (
     <div>
       <div className="flex flex-col justify-center items-center">

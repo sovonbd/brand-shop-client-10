@@ -39,7 +39,7 @@ const UpdateProduct = () => {
       rating,
       photo,
     };
-    // console.log(item);
+    console.log(item);
 
     fetch(`https://foodie-server-black.vercel.app/products/${_id}`, {
       method: "PUT",

@@ -28,7 +28,7 @@ const FoodMenuPage = () => {
   }, [path]);
 
   const location = useLocation();
-  // console.log(items, noData);
+  console.log(noData);
 
   let itemsPhoto;
 
@@ -57,6 +57,12 @@ const FoodMenuPage = () => {
       "https://i.imgur.com/ZsfJ866.jpg",
     ];
   } else if (location.pathname === "/subway") {
+    itemsPhoto = [
+      "https://i.imgur.com/VEtBftB.jpg",
+      "https://i.imgur.com/FBdk1u5.jpg",
+      "https://i.imgur.com/Ob94x6A.jpg",
+    ];
+  } else if (location.pathname === "/starbucks") {
     itemsPhoto = [
       "https://i.imgur.com/VEtBftB.jpg",
       "https://i.imgur.com/FBdk1u5.jpg",
