@@ -16,7 +16,7 @@ const CartItems = ({ item, items, setItems }) => {
   } = item;
 
   const handleDelete = (_id) => {
-    console.log(_id);
+    // console.log(_id);
     Swal.fire({
       title: "Are you sure?",
       text: "You won't be able to revert this!",
@@ -32,7 +32,7 @@ const CartItems = ({ item, items, setItems }) => {
         })
           .then((res) => res.json())
           .then((data) => {
-            console.log(data);
+            // console.log(data);
             if (data.deletedCount > 0) {
               Swal.fire("Deleted!", `${itemName} has been deleted.`, "success");
               const remainingItems = items.filter(
