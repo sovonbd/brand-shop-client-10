@@ -3,8 +3,16 @@ import { useLoaderData } from "react-router-dom";
 const UpdateProduct = () => {
   const data = useLoaderData();
 
-  const { _id, itemName, restaurant, price, type, description, rating, photo } =
-    data;
+  const {
+    _id,
+    itemName,
+    productType,
+    price,
+    brand,
+    description,
+    rating,
+    photo,
+  } = data;
 
   console.log(data);
   const handleUpdateProduct = (e) => {
@@ -12,9 +20,9 @@ const UpdateProduct = () => {
 
     const form = e.target;
     const itemName = form.itemName.value;
-    const restaurant = form.restaurant.value;
+    const productType = form.productType.value;
     const price = form.price.value;
-    const type = form.itemType.value
+    const brand = form.brand.value
       .toLowerCase()
       .replace(/ /g, "")
       .replace(/'/g, "");
@@ -24,9 +32,9 @@ const UpdateProduct = () => {
 
     const item = {
       itemName,
-      restaurant,
+      productType,
       price,
-      type,
+      brand,
       description,
       rating,
       photo,
@@ -66,37 +74,37 @@ const UpdateProduct = () => {
           </div>
           <div className="">
             <label className="label">
-              <span className="label-text font-semibold">Restaurant Name</span>
+              <span className="label-text font-semibold">Product Type Name</span>
             </label>
             <label className="">
               <input
                 type="text"
-                name="restaurant"
+                name="productType"
                 className="input input-bordered w-full"
-                defaultValue={restaurant}
+                defaultValue={productType}
                 style={{ borderRadius: "0px" }}
               />
             </label>
           </div>
           <div className="">
             <label className="label">
-              <span className="label-text font-semibold">Type</span>
+              <span className="label-text font-semibold">Brand Name</span>
             </label>
             <select
-              name="itemType"
+              name="brand"
               className="select select-bordered w-full"
               defaultValue={
-                type === "pizzahut"
+                brand === "pizzahut"
                   ? "Pizza Hut"
-                  : type === "burgerking"
+                  : brand === "burgerking"
                   ? "Burger King"
-                  : type === "kfc"
+                  : brand === "kfc"
                   ? "KFC"
-                  : type === "mcdonalds"
+                  : brand === "mcdonalds"
                   ? "McDonald's"
-                  : type === "subway"
+                  : brand === "subway"
                   ? "Subway"
-                  : type === "starbucks"
+                  : brand === "starbucks"
                   ? "Starbucks"
                   : ""
               }

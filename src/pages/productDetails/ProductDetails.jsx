@@ -17,7 +17,7 @@ const ProductDetails = () => {
       .then((data) => setItems(data));
   }, [id]);
 
-  const { itemName, restaurant, price, type, description, rating, photo } =
+  const { itemName, productType, price, brand, description, rating, photo } =
     items;
 
   const handleAddToCart = () => {

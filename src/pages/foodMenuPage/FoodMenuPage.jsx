@@ -16,7 +16,7 @@ const FoodMenuPage = () => {
   // console.log(path);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/products/type/${path}`)
+    fetch(`http://localhost:5000/products/brand/${path}`)
       .then((res) => res.json())
       .then((data) => {
         if (data.length > 0) {
@@ -28,24 +28,42 @@ const FoodMenuPage = () => {
   }, [path]);
 
   const location = useLocation();
+  console.log(items, noData);
 
-  // let itemsPhoto;
+  let itemsPhoto;
 
-  // if (location.pathname === "/pizzahut") {
-  //   itemsPhoto = [
-  //     "https://i.imgur.com/OdCUaRe.jpg",
-  //     "https://i.imgur.com/OdCUaRe.jpg",
-  //     "https://i.imgur.com/OdCUaRe.jpg",
-  //   ];
-  // }
+  if (location.pathname === "/pizzahut") {
+    itemsPhoto = [
+      "https://i.imgur.com/vwrRz6Q.jpg",
+      "https://i.imgur.com/OdCUaRe.jpg",
+      "https://i.imgur.com/SihzeXD.jpg",
+    ];
+  } else if (location.pathname === "/burgerking") {
+    itemsPhoto = [
+      "https://i.imgur.com/Xzj2FwH.jpg",
+      "https://i.imgur.com/orO2Jlq.jpg",
+      "https://i.imgur.com/Xzj2FwH.jpg",
+    ];
+  } else if (location.pathname === "/kfc") {
+    itemsPhoto = [
+      "https://i.imgur.com/CMS2hga.jpg",
+      "https://i.imgur.com/OCEHsnI.jpg",
+      "https://i.imgur.com/BPS6Oet.jpg",
+    ];
+  } else if (location.pathname === "/mcdonalds") {
+    itemsPhoto = [
+      "https://i.imgur.com/aLI6Vs4.jpg",
+      "https://i.imgur.com/MW87qLI.jpg",
+      "https://i.imgur.com/ZsfJ866.jpg",
+    ];
+  } else if (location.pathname === "/subway") {
+    itemsPhoto = [
+      "https://i.imgur.com/VEtBftB.jpg",
+      "https://i.imgur.com/FBdk1u5.jpg",
+      "https://i.imgur.com/Ob94x6A.jpg",
+    ];
+  }
 
-  const itemsPhoto = [
-    "https://i.imgur.com/OdCUaRe.jpg",
-    "https://i.imgur.com/OdCUaRe.jpg",
-    "https://i.imgur.com/OdCUaRe.jpg",
-  ];
-  // const itemsPhoto = items.map((item) => item.photo);
-  console.log(itemsPhoto[0]);
 
   return (
     <div>

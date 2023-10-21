@@ -4,8 +4,16 @@ import "@smastrom/react-rating/style.css";
 import { Link } from "react-router-dom";
 
 const SingleMenuPage = ({ item }) => {
-  const { _id, itemName, restaurant, price, type, description, rating, photo } =
-    item;
+  const {
+    _id,
+    itemName,
+    productType,
+    price,
+    brand,
+    description,
+    rating,
+    photo,
+  } = item;
   return (
     <div>
       <div className="flex flex-col justify-center items-center">
@@ -20,10 +28,22 @@ const SingleMenuPage = ({ item }) => {
           <div className="space-y-2 px-2 py-4 items-center text-center">
             <div className="flex justify-between">
               <p className="border rounded-lg px-4 text-sm border-[#F36527]">
-                {restaurant}
+                {productType}
               </p>
               <p className="border rounded-lg px-4 text-sm border-[#F36527]">
-                {type}
+                {brand === "pizzahut"
+                  ? "Pizza Hut"
+                  : brand === "burgerking"
+                  ? "Burger King"
+                  : brand === "kfc"
+                  ? "KFC"
+                  : brand === "mcdonalds"
+                  ? "McDonald's"
+                  : brand === "subway"
+                  ? "Subway"
+                  : brand === "starbucks"
+                  ? "Starbucks"
+                  : ""}
               </p>
             </div>
             <div className="flex flex-col justify-center items-center py-2">

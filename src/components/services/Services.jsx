@@ -47,10 +47,10 @@ const Services = () => {
                 alt=""
               />
               <h1 className="text-black text-2xl lg:text-3xl font-bold lg:pl-4">
-                Cash On Delivery
+                Complete Payment
               </h1>
               <p className="text-black/50 lg:pl-4">
-                Online food Delivery for hiring Foodie. We appreciate your
+                Online food Delivery for ordering Foodie. We appreciate your
                 business, and we’ll do best to continue to give you the new
                 kind.
               </p>

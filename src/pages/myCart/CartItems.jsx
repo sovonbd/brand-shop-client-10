@@ -6,8 +6,16 @@ import { data } from "autoprefixer";
 import Swal from "sweetalert2";
 
 const CartItems = ({ item, items, setItems }) => {
-  const { _id, itemName, restaurant, price, type, description, rating, photo } =
-    item;
+  const {
+    _id,
+    itemName,
+    productType,
+    price,
+    brand,
+    description,
+    rating,
+    photo,
+  } = item;
 
   const handleDelete = (_id) => {
     console.log(_id);
@@ -51,7 +59,21 @@ const CartItems = ({ item, items, setItems }) => {
               ${price}
             </p>
             <p className="font-semibold">{itemName}</p>
-            <p className="text-sm">{type}</p>
+            <p className="text-sm">
+              {brand === "pizzahut"
+                ? "Pizza Hut"
+                : brand === "burgerking"
+                ? "Burger King"
+                : brand === "kfc"
+                ? "KFC"
+                : brand === "mcdonalds"
+                ? "McDonald's"
+                : brand === "subway"
+                ? "Subway"
+                : brand === "starbucks"
+                ? "Starbucks"
+                : ""}
+            </p>
             <Rating
               style={{ maxWidth: 90 }}
               readOnly

@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Banner = () => {
   return (
     <div
@@ -18,9 +20,11 @@ const Banner = () => {
             Celebrate culinary excellence with our curated masterpieces that
             delight your taste buds and create unforgettable dining experiences.
           </p>
-          <button className="btn px-8 text-lg bg-[#F36527] border-white border-2 text-white normal-case hover:bg-transparent hover:border-[#F36527]">
-            Get Started
-          </button>
+          <Link to="/login">
+            <button className="btn px-8 text-lg bg-[#F36527] border-white border-2 text-white normal-case hover:bg-transparent hover:border-[#F36527]">
+              Get Started
+            </button>
+          </Link>
         </div>
       </div>
     </div>

@@ -4,9 +4,9 @@ const AddProduct = () => {
 
     const form = e.target;
     const itemName = form.itemName.value;
-    const restaurant = form.restaurant.value;
+    const productType = form.productType.value;
     const price = form.price.value;
-    const type = form.itemType.value
+    const brand = form.brand.value
       .toLowerCase()
       .replace(/ /g, "")
       .replace(/'/g, "");
@@ -16,9 +16,9 @@ const AddProduct = () => {
 
     const item = {
       itemName,
-      restaurant,
+      productType,
       price,
-      type,
+      brand,
       description,
       rating,
       photo,
@@ -32,6 +32,7 @@ const AddProduct = () => {
       },
       body: JSON.stringify(item),
     });
+    form.reset();
   };
   return (
     <div>
@@ -58,28 +59,35 @@ const AddProduct = () => {
           </div>
           <div className="">
             <label className="label">
-              <span className="label-text font-semibold">Restaurant Name</span>
+              <span className="label-text font-semibold">Product Type</span>
             </label>
-            <label className="">
-              <input
-                type="text"
-                name="restaurant"
-                placeholder="Enter restaurant name"
-                className="input input-bordered w-full"
-                style={{ borderRadius: "0px" }}
-              />
-            </label>
+            <select
+              name="productType"
+              className="select select-bordered w-full"
+              style={{ borderRadius: "0px" }}>
+              <option selected>
+                Choose the product?
+              </option>
+              <option>Pizza</option>
+              <option>Burger</option>
+              <option>Fries</option>
+              <option>Fried Chicken</option>
+              <option>Wrap</option>
+              <option>Nuggets</option>
+              <option>Sandwich</option>
+              <option>Drinks</option>
+            </select>
           </div>
           <div className="">
             <label className="label">
-              <span className="label-text font-semibold">Type</span>
+              <span className="label-text font-semibold">Brand Name</span>
             </label>
             <select
-              name="itemType"
+              name="brand"
               className="select select-bordered w-full"
               style={{ borderRadius: "0px" }}>
-              <option disabled selected>
-                Choose the category?
+              <option selected>
+                Choose the brand?
               </option>
               <option>Pizza Hut</option>
               <option>Burger King</option>

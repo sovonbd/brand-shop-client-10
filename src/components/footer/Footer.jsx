@@ -14,7 +14,7 @@ const Footer = () => {
             />
           </Link>
           <p className="font-bold">
-            Foodie Restaurant Ltd. <br />
+            Foodie Technologies Inc. <br />
             Providing the best dishes since 2000
           </p>
           <p>Copyright © 2023 - All right reserved</p>
