@@ -61,4 +61,4 @@ If you'd like to contribute to this project, feel free to fork the repository an
 
 ---
 
-_This README serves as a guide and overview of Edumart. For detailed instructions and additional information, please refer to the project documentation or contact the contributor._
+_This README serves as a guide and overview of Foodie. For detailed instructions and additional information, please refer to the project documentation or contact the contributor._
