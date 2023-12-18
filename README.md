@@ -1,6 +1,8 @@
 # Foodie - Your Ultimate Food Brand Shop
 
-Check out the live demo of [Foodie](https://foodie-daa6d.web.app/)
+Check out the live demo of Foodie: [Foodie](https://foodie-daa6d.web.app/)
+
+Check out the server side code of Foodie: [Foodie-server](https://github.com/sovonbd/brand-shop-server-10)
 
 Welcome to Foodie, the one-stop solution for all your favorite food brands! This project is a web application built using React.js for the front end and Node.js, Express, and MongoDB for the backend. It incorporates various technologies to offer a seamless food shopping experience.
 
